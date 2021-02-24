@@ -7,8 +7,8 @@ public class StringCalculator {
         } else if(Pattern.matches("[0-9]+", numbers)) {
             return Integer.parseInt(numbers);
         } else {
-            // ToDo: Implement Logic to make test case pass
-            return 0;
+            String arr[] = numbers.split(",");
+            return Integer.parseInt(arr[0]) + Integer.parseInt(arr[1]);
         }
     }
 }

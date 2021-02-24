@@ -18,8 +18,8 @@ class StringCalculatorTest {
     @DisplayName("Result should be the passed number if single number is passed as the argument")
     void addIfSingleNumber() {
         StringCalculator stringCalculator = new StringCalculator();
-        int actualResult = stringCalculator.add("123456789");
-        int expectedResult = 123456789;
+        int actualResult = stringCalculator.add("1123");
+        int expectedResult = 1123;
         assertEquals(expectedResult, actualResult);
     }
 
