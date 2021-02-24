@@ -76,7 +76,7 @@ class StringCalculatorTest {
     }
 
     @Test
-    @DisplayName("Result = sum of all numbers minus number greater than 1000")
+    @DisplayName("Result = 0 if input is greater than 1000")
     void addWithOneKiloNumbers() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("0");

@@ -53,22 +53,12 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StringCalculatorTest.addWithOneKiloNumbers">
+  <component name="RunManager" selected="JUnit.StringCalculatorTest.addWithMultipleKiloNumbers">
     <configuration name="StringCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="string_calculator" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StringCalculatorTest" />
       <option name="TEST_OBJECT" value="class" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="StringCalculatorTest.addIfDoubleNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="string_calculator" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="StringCalculatorTest" />
-      <option name="METHOD_NAME" value="addIfDoubleNumber" />
-      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -93,6 +83,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="StringCalculatorTest.addWithMultipleKiloNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="string_calculator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StringCalculatorTest" />
+      <option name="METHOD_NAME" value="addWithMultipleKiloNumbers" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="StringCalculatorTest.addWithOneKiloNumbers" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="string_calculator" />
       <option name="PACKAGE_NAME" value="" />
@@ -105,11 +105,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StringCalculatorTest.addWithMultipleKiloNumbers" />
         <item itemvalue="JUnit.StringCalculatorTest.addWithOneKiloNumbers" />
         <item itemvalue="JUnit.StringCalculatorTest.addWithKiloNumbers" />
         <item itemvalue="JUnit.StringCalculatorTest" />
         <item itemvalue="JUnit.StringCalculatorTest.addNonNegatives" />
-        <item itemvalue="JUnit.StringCalculatorTest.addIfDoubleNumber" />
       </list>
     </recent_temporary>
   </component>
