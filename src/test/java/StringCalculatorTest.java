@@ -77,7 +77,16 @@ class StringCalculatorTest {
 
     @Test
     @DisplayName("Result = sum of all numbers minus number greater than 1000")
-    void addWithKiloNumbers() throws NegativesNotAllowedException {
+    void addWithOneKiloNumbers() throws NegativesNotAllowedException {
+        StringCalculator stringCalculator = new StringCalculator();
+        int actualResult = stringCalculator.add("0");
+        int expectedResult = 0;
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    @DisplayName("Result = sum of all numbers minus number greater than 1000")
+    void addWithMultipleKiloNumbers() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("100\n1,2\n3,1002");
         int expectedResult = 106;
