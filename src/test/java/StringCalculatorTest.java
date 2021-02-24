@@ -18,8 +18,8 @@ class StringCalculatorTest {
     @DisplayName("Result = input number if single number is passed as the argument")
     void addIfSingleNumber() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
-        int actualResult = stringCalculator.add("1123");
-        int expectedResult = 1123;
+        int actualResult = stringCalculator.add("123");
+        int expectedResult = 123;
         assertEquals(expectedResult, actualResult);
     }
 
@@ -90,6 +90,15 @@ class StringCalculatorTest {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("100\n1,2\n3,1002");
         int expectedResult = 106;
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    @DisplayName("Should match the number of calls made to the add method")
+    void callCount() throws NegativesNotAllowedException {
+        StringCalculator stringCalculator = new StringCalculator();
+        int actualResult = stringCalculator.GetCalledCount();
+        int expectedResult = 10;
         assertEquals(expectedResult, actualResult);
     }
 }
