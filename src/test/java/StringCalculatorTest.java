@@ -40,4 +40,13 @@ class StringCalculatorTest {
         int expectedResult = 6;
         assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    @DisplayName("Result = sum of all numbers in the argument with comma and new line delimiter")
+    void addWithNewLine() {
+        StringCalculator stringCalculator = new StringCalculator();
+        int actualResult = stringCalculator.add("1\n2,3");
+        int expectedResult = 6;
+        assertEquals(expectedResult, actualResult);
+    }
 }
