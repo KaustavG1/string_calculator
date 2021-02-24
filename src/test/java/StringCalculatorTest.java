@@ -49,4 +49,20 @@ class StringCalculatorTest {
         int expectedResult = 6;
         assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    @DisplayName("Result = sum of all numbers in the argument with custom delimiter")
+    void addWithCustomDelimiter() {
+        StringCalculator stringCalculator = new StringCalculator();
+        int actualResult = stringCalculator.add("//;\n1;2");
+        int expectedResult = 3;
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    @DisplayName("Exception should be thrown if number is negative")
+    void addNonNegatives() {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertThrows(NegativesNotAllowedException.class, () -> stringCalculator.add("-1,2"));
+    }
 }
