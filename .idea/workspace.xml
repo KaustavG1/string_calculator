@@ -52,12 +52,22 @@
       <recent name="" />
     </key>
   </component>
-  <component name="RunManager" selected="JUnit.StringCalculatorTest.addIfSingleNumber">
+  <component name="RunManager" selected="JUnit.StringCalculatorTest.addIfDoubleNumber">
     <configuration name="StringCalculatorTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="string_calculator" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="StringCalculatorTest" />
       <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="StringCalculatorTest.addIfDoubleNumber" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="string_calculator" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="StringCalculatorTest" />
+      <option name="METHOD_NAME" value="addIfDoubleNumber" />
+      <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -84,6 +94,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.StringCalculatorTest.addIfDoubleNumber" />
         <item itemvalue="JUnit.StringCalculatorTest.addIfSingleNumber" />
         <item itemvalue="JUnit.StringCalculatorTest" />
         <item itemvalue="JUnit.StringCalculatorTest.addIfEmptyString" />

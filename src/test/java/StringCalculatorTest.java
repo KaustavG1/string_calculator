@@ -11,7 +11,7 @@ class StringCalculatorTest {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("");
         int expectedResult = 0;
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
     }
 
     @Test
@@ -20,6 +20,15 @@ class StringCalculatorTest {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("123456789");
         int expectedResult = 123456789;
-        assertEquals(actualResult, expectedResult);
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    @DisplayName("Result should be the sum of numbers in the argument string if argument is in the format 'x,y'")
+    void addIfDoubleNumber() {
+        StringCalculator stringCalculator = new StringCalculator();
+        int actualResult = stringCalculator.add("1,2");
+        int expectedResult = 3;
+        assertEquals(expectedResult, actualResult);
     }
 }
