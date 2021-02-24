@@ -7,7 +7,7 @@ public class StringCalculator {
         } else if(Pattern.matches("[0-9]+", numbers)) {
             int singleInput = Integer.parseInt(numbers);
             if(singleInput < 0) {
-                throw new NegativesNotAllowedException();
+                throw new NegativesNotAllowedException("Negatives not allowed; " + singleInput + " was passed");
             }
             return Integer.parseInt(numbers);
         } else {
@@ -16,7 +16,7 @@ public class StringCalculator {
             int result = 0;
             for(String a : arr) {
                 if(Integer.parseInt(a) < 0) {
-                    throw new NegativesNotAllowedException();
+                    throw new NegativesNotAllowedException("Negatives not allowed; " + a + " was passed");
                 }
                 result += Integer.parseInt(a);
             }

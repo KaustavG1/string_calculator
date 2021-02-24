@@ -1,5 +1,5 @@
 public class NegativesNotAllowedException extends Exception{
-    public NegativesNotAllowedException() {
-        super("Negatives not allowed");
+    public NegativesNotAllowedException(final String message) {
+        super(message);
     }
 }

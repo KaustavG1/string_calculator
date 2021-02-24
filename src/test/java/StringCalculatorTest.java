@@ -60,9 +60,18 @@ class StringCalculatorTest {
     }
 
     @Test
-    @DisplayName("Exception should be thrown if number is negative")
-    void addNonNegatives() {
+    @DisplayName("Exception should be thrown if any number is negative")
+    void addNonNegatives() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
         assertThrows(NegativesNotAllowedException.class, () -> stringCalculator.add("-1"));
+        assertThrows(NegativesNotAllowedException.class, () -> stringCalculator.add("-1,25"));
+    }
+
+    @Test
+    @DisplayName("Exception should be thrown if multiple numbers are negative")
+    void addMultipleNonNegatives() throws NegativesNotAllowedException {
+        StringCalculator stringCalculator = new StringCalculator();
+        assertThrows(NegativesNotAllowedException.class, () -> stringCalculator.add("-1,-25,6"));
+//        stringCalculator.add("-1,-2,-100,-4152,-8,25");
     }
 }
