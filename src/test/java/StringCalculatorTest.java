@@ -7,7 +7,7 @@ class StringCalculatorTest {
 
     @Test
     @DisplayName("Result = 0, if empty string is passed as the argument")
-    void addIfEmptyString() {
+    void addIfEmptyString() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("");
         int expectedResult = 0;
@@ -16,7 +16,7 @@ class StringCalculatorTest {
 
     @Test
     @DisplayName("Result = input number if single number is passed as the argument")
-    void addIfSingleNumber() {
+    void addIfSingleNumber() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("1123");
         int expectedResult = 1123;
@@ -25,7 +25,7 @@ class StringCalculatorTest {
 
     @Test
     @DisplayName("Result = sum of 2 input numbers in the argument string if argument is in the format 'x,y'")
-    void addIfDoubleNumber() {
+    void addIfDoubleNumber() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("1,2");
         int expectedResult = 3;
@@ -34,7 +34,7 @@ class StringCalculatorTest {
 
     @Test
     @DisplayName("Result = sum of all numbers in the argument string if argument is in the format 'x,y,...'")
-    void addIfMultipleNumber() {
+    void addIfMultipleNumber() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("1,2,3");
         int expectedResult = 6;
@@ -43,7 +43,7 @@ class StringCalculatorTest {
 
     @Test
     @DisplayName("Result = sum of all numbers in the argument with comma and new line delimiter")
-    void addWithNewLine() {
+    void addWithNewLine() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("1\n2,3");
         int expectedResult = 6;
@@ -52,7 +52,7 @@ class StringCalculatorTest {
 
     @Test
     @DisplayName("Result = sum of all numbers in the argument with custom delimiter")
-    void addWithCustomDelimiter() {
+    void addWithCustomDelimiter() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("//;\n1;2");
         int expectedResult = 3;
@@ -63,6 +63,6 @@ class StringCalculatorTest {
     @DisplayName("Exception should be thrown if number is negative")
     void addNonNegatives() {
         StringCalculator stringCalculator = new StringCalculator();
-        assertThrows(NegativesNotAllowedException.class, () -> stringCalculator.add("-1,2"));
+        assertThrows(NegativesNotAllowedException.class, () -> stringCalculator.add("-1"));
     }
 }
