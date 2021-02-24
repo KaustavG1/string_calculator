@@ -14,13 +14,17 @@ public class StringCalculator {
             numbers = numbers.replace("\n", ",");
             String arr[] = numbers.split(",");
             int result = 0;
+            StringBuilder stringBuilder = new StringBuilder();
             for(String a : arr) {
                 if(Integer.parseInt(a) < 0) {
-                    throw new NegativesNotAllowedException("Negatives not allowed; " + a + " was passed");
+                    stringBuilder.append(a).append(" ");
                 }
                 result += Integer.parseInt(a);
             }
-            return  result;
+            if(stringBuilder.toString().length() > 0) {
+                throw new NegativesNotAllowedException("Negatives not allowed; " + stringBuilder.toString() + " was passed");
+            }
+            return result;
         }
     }
 }
