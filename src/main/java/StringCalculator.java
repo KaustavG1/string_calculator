@@ -8,7 +8,11 @@ public class StringCalculator {
             return Integer.parseInt(numbers);
         } else {
             String arr[] = numbers.split(",");
-            return Integer.parseInt(arr[0]) + Integer.parseInt(arr[1]);
+            int result = 0;
+            for(String a : arr) {
+                result += Integer.parseInt(a);
+            }
+            return  result;
         }
     }
 }
