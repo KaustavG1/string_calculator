@@ -6,7 +6,7 @@ import static org.junit.jupiter.api.Assertions.*;
 class StringCalculatorTest {
 
     @Test
-    @DisplayName("Result should be 0 if empty string is passed as the argument")
+    @DisplayName("Result = 0, if empty string is passed as the argument")
     void addIfEmptyString() {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("");
@@ -15,7 +15,7 @@ class StringCalculatorTest {
     }
 
     @Test
-    @DisplayName("Result should be the passed number if single number is passed as the argument")
+    @DisplayName("Result = input number if single number is passed as the argument")
     void addIfSingleNumber() {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("1123");
@@ -24,11 +24,20 @@ class StringCalculatorTest {
     }
 
     @Test
-    @DisplayName("Result should be the sum of numbers in the argument string if argument is in the format 'x,y'")
+    @DisplayName("Result = sum of 2 input numbers in the argument string if argument is in the format 'x,y'")
     void addIfDoubleNumber() {
         StringCalculator stringCalculator = new StringCalculator();
         int actualResult = stringCalculator.add("1,2");
         int expectedResult = 3;
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    @DisplayName("Result = sum of all numbers in the argument string if argument is in the format 'x,y,...'")
+    void addIfMultipleNumber() {
+        StringCalculator stringCalculator = new StringCalculator();
+        int actualResult = stringCalculator.add("1,2,3");
+        int expectedResult = 6;
         assertEquals(expectedResult, actualResult);
     }
 }
