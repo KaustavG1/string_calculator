@@ -98,8 +98,8 @@ class StringCalculatorTest {
     @DisplayName("Should match the number of calls made to the add method")
     void callCount() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
-        int actualResult = stringCalculator.GetCalledCount();
-        int expectedResult = 10;
+        int actualResult = stringCalculator.GetCalledCount() + 1;
+        int expectedResult = 5;
         assertEquals(expectedResult, actualResult);
     }
 
@@ -116,7 +116,7 @@ class StringCalculatorTest {
     @DisplayName("Result = sum of all numbers in the argument with multiple custom delimiter")
     void addWithMultipleDelimiters() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
-        int actualResult = stringCalculator.add("//[*][%]\\n1*2%3");
+        int actualResult = stringCalculator.add("//[*][%]\n1*2%3");
         int expectedResult = 6;
         assertEquals(expectedResult, actualResult);
     }
@@ -125,7 +125,7 @@ class StringCalculatorTest {
     @DisplayName("Result = sum of all numbers in the argument with multiple custom delimiter of variable length")
     void addWithMultipleMultiSizeDelimiters() throws NegativesNotAllowedException {
         StringCalculator stringCalculator = new StringCalculator();
-        int actualResult = stringCalculator.add("//[**][%%]\\n1**2%%3");
+        int actualResult = stringCalculator.add("//[**][%%]\n1**2%%3");
         int expectedResult = 6;
         assertEquals(expectedResult, actualResult);
     }
