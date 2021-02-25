@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
@@ -101,4 +102,32 @@ class StringCalculatorTest {
         int expectedResult = 10;
         assertEquals(expectedResult, actualResult);
     }
+
+    @Test
+    @DisplayName("Result = sum of all numbers in the argument with custom delimiter of variable length")
+    void addWithMultiSizeDelimiters() throws NegativesNotAllowedException {
+        StringCalculator stringCalculator = new StringCalculator();
+        int actualResult = stringCalculator.add("//[***]\n1***2***3");
+        int expectedResult = 6;
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    @DisplayName("Result = sum of all numbers in the argument with multiple custom delimiter")
+    void addWithMultipleDelimiters() throws NegativesNotAllowedException {
+        StringCalculator stringCalculator = new StringCalculator();
+        int actualResult = stringCalculator.add("//[*][%]\\n1*2%3");
+        int expectedResult = 6;
+        assertEquals(expectedResult, actualResult);
+    }
+
+    @Test
+    @DisplayName("Result = sum of all numbers in the argument with multiple custom delimiter of variable length")
+    void addWithMultipleMultiSizeDelimiters() throws NegativesNotAllowedException {
+        StringCalculator stringCalculator = new StringCalculator();
+        int actualResult = stringCalculator.add("//[**][%%]\\n1**2%%3");
+        int expectedResult = 6;
+        assertEquals(expectedResult, actualResult);
+    }
+
 }
